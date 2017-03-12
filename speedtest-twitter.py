@@ -43,7 +43,7 @@ def test():
         #Replace the @xxxx with the Twitter handle of who you want to Tweet at
         if "Cannot" in a:
                 try:
-                        tweet="Hey @xxxx  I'd love to use your speed test, but looks like you're having some issues"
+                        tweet="Hey @xxxx  internet issues?"
                         twit.statuses.update(status=tweet)
                 except:
                         pass
