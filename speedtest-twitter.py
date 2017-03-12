@@ -50,7 +50,7 @@ def test():
 
         # tweet if upload speed is less than 1 Mb/s
         elif eval(u)<1:
-                print "Tweeting SECV with a look of slight anger and disappointment"
+                print "Tweeting provider with a look of slight anger and disappointment"
                 try:
                         tweet="Hey @xxxx My upload speed is currently less than" + str(int(eval(u))) + " Mb/sec. WTF!\\"
                         twit.statuses.update(status=tweet)
