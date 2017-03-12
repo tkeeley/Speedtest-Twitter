@@ -9,6 +9,7 @@ def test():
 
         #run speedtest-cli
         print 'Testing some blazing fast internet speeds'
+        #make sure you use speedtest-cli --simple so the indexing is correct
         a = os.popen("sudo speedtest-cli --simple").read()
         print 'ran'
         #split the 3 line result (ping,down,up)
@@ -23,6 +24,7 @@ def test():
                 u = 0
         #extract the values for ping down and up values
         else:
+                #we'll grab all this in case we want to use the other readings later
                 p = lines[0][6:11]
                 d = lines[1][10:14]
                 u = lines[2][8:11]
@@ -41,6 +43,7 @@ def test():
 
         #try to tweet if speedtest couldnt connet.
         #Replace the @xxxx with the Twitter handle of who you want to Tweet at
+        #This may not work if internet is completely down
         if "Cannot" in a:
                 try:
                         tweet="Hey @xxxx  internet issues?"
@@ -49,6 +52,7 @@ def test():
                         pass
 
         # tweet if upload speed is less than 1 Mb/s
+        #Replace the @xxxx with the Twitter handle of who you want to Tweet at
         elif eval(u)<1:
                 print "Tweeting provider with a look of slight anger and disappointment"
                 try:
