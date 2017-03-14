@@ -3,6 +3,7 @@
 *Update you Pi
 
 sudo apt-get update
+
 sudo apt-get upgrade
 
 —————————
@@ -10,7 +11,9 @@ sudo apt-get upgrade
 *Get these packages
 
 sudo apt-get install python-setuptools
+
 sudo easy_install pip
+
 sudo pip install twython
 
 ——————————
@@ -30,9 +33,13 @@ python setup.py build
 python setup.py install
 
 ——————————
+
 *Create the Twitter app
+
 Go to:
+
 https://dev.twitter.com/
+
 and create a new app. (You will need a twitter account for this.)
 
 Fill in the name, description and website for your app.
@@ -46,10 +53,13 @@ Now we’ll need to create an OAuth access token for our app. This will let us l
 Make a note of your Consumer Key and Consumer Secret as well as your Access Token and Access Token Secret. You’ll need these later for you Python script.
 
 ———————————————
+
 *Now shh into your Raspberry Pi. We’re going to make a directory that we can keep all of our code in:
 
 sudo mkdir speedtest-twitter
+
 cd speedtest-twitter
+
 sudo nano speedtest-twitter.py
 
 Once you’ve opened speedtest-twitter.py in nano (or whatever text editor you use) you’ll paste in the Python script.
@@ -73,12 +83,15 @@ sudo python speedtest-twitter.py
 *You can set this to run automatically at specific times. I have mine set to run every 5 minutes.
 
 To do this, you’ll have to edit your crontab file. Do this by typing 
+
 sudo crontab -e
 
 Mine looks like this…
+
 */5 * * * * /home/pi/speedtest-twitter/speedtest-twitter.py
 
 *Disclaimer!!!
+
 Don’t be dumb. If you do something stupid with this script it’s on you!
 
 
