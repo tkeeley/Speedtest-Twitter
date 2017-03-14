@@ -31,7 +31,7 @@ python setup.py install
 
 ——————————
 *Create the Twitter app
-Got to:
+Go to:
 https://dev.twitter.com/
 and create a new app. (You will need a twitter account for this.)
 
