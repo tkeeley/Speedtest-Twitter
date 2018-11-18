@@ -1,6 +1,6 @@
 *This walkthrough assumes you already have experience using your pi through ssh and command line or terminal.*
 
-*Update you Pi
+*Update your Pi
 
 sudo apt-get update
 
